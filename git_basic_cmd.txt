@@ -1,0 +1,27 @@
+# Git basic commands 
+
+#  Create a new repo [git] on GitHub and locally
+   001. Create a repo on git hub
+   002. Create a local repo folder with the same name from step 1
+   003. Create a new file
+   004. git init
+   005. git add .
+   006. git commit -m "my first file in xx repo"
+   007. git branch -M git-prod
+        git branck
+        git checkout 
+   008. git remote add origin ssh-link-to-this-repo
+   009. git push -u origin git-prod 
+   010. git status
+   011. git log --oneline
+
+
+#   Create a new branch [git-dev] locally and push to GitHub
+   001. git branch -M git-dev
+   002. git checkout git-dev
+   002. git push -u origin git-dev
+
+#   Create a new branch [git-stg] locally and push to GitHub
+   001. git checkout -b git-stg
+   002. git push -u origin git-stg
+   003. git branch
