@@ -25,3 +25,19 @@
    001. git checkout -b git-stg
    002. git push -u origin git-stg
    003. git branch
+
+#   Delete branch locally
+   001. git branch -d localBranchName
+        # The -d option will delete the branch only if it has already been pushed and merged with the remote branch. 
+        # Use -D instead if you want to force the branch to be deleted, even if it hasn't been pushed or merged yet.
+        # 
+
+#   Delete branch remotely        
+   001. git push --delete origin remoteBranchName
+   002. git push origin :remoteBranchName   # shorter cmd, same as 001.
+        # If see error like this "error: unable to push to unqualified destination: remoteBranchName The destination refspec neither matches an existing ref on the remote nor begins with refs/, and we are unable to guess a prefix based on the source ref. error: failed to push some refs to 'git@repository_name'"
+        # Meaning someone already deleted remote branch
+        # Try synchronize the branch list
+        git fetch -p   # -p means "prune"
+        
+#   
