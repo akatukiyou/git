@@ -54,4 +54,31 @@
    001. git commit -am "make some changes"
    002. git reset HEAD~
    003. git checkout -- filename
+    # reset to previous versions
+   001. git reset --hard HEAD   # go back to the last commit
+   002. git reset --hard HEAD~   # go back to the [last-1] commit
+   003. git reset --hard HEAD~n   # go back to the [last - n] commit
+
+#   Git diff
+    # In working directory, making changes, but no [add] or [commit]
+   001. git diff
+    # After [add] 
+   001. git diff --cached
+
+#   Remove and Rename 
+   001. git mv old-name new-name
+   002. git add .
+   003. git rm --cached filename
+
+#   Git Ignore
+   001. crearte a file [.gitignore]
+   002. modify this file [*.tmp]   # git will no longer manage .tmp file in this folder and all subfolders
+
+#   Git update the last commit
+    # if need to make some change to the last commit but dont want to have nwe records in log for the change.
+   001. make changes to the file.
+   002. git add .
+   003. git status
+   004. git log --oneline
+   005. git commit --amend
 
