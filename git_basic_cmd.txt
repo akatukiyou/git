@@ -7,6 +7,7 @@
    004. git init
    005. git add .
    006. git commit -m "my first file in xx repo"
+        git commit -am "make some changes"   # -am is the same as [add] + [commit], it can be only used for modified existing files, not for new file.
    007. git branch -M git-prod
         git branck
         git checkout 
@@ -39,5 +40,18 @@
         # Meaning someone already deleted remote branch
         # Try synchronize the branch list
         git fetch -p   # -p means "prune"
-        
-#   
+
+#   Git status reset 
+    # if no [add] & [commid] yet, to reverse to previous version
+   001. git status   # check current git status
+   002. git checkout -- filename   # this will revert to previous status of the file
+    # if [add] file, to revers to previous version
+   001. git add .
+   002. git reset HEAD filename
+   003. git checkout -- filename
+   004. git status
+    # if [add] and [commit] file already, to revert to previous version
+   001. git commit -am "make some changes"
+   002. git reset HEAD~
+   003. git checkout -- filename
+
